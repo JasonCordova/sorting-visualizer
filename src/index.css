@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Elza;
+  background-color: #121212;
+}
+
+.holder {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  padding: 2em 0em;
+  height: min(500px, calc(90vh - 4em));
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.rect{background-color: white; flex-grow: 1;
+border: 1px solid #0000001f;}
+
+.stats {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  gap: 24px;
+  width: 100%;
+  background: linear-gradient(180deg,#121212, transparent);
+}
+
+.cell {display: flex; flex-direction: column; font-weight: 500; font-size: 1.1em;}
+
+.cell-title {
+  text-transform: uppercase;
+  color: #B7B7B7;
+  font-size: 0.7em;
+}
+
+.centered {
+  align-items: center;
+}
+
+input.cell-value {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  color: inherit;
+  text-align: center;
+  width: 48px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.cell-value {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+div.cell-value {
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+  padding: 24px;
+  box-sizing: border-box;
+  gap: 24px;
+  background: linear-gradient(180deg, transparent, #121212);
+}
+
+.controls .button {fill: rgb(255, 255, 255); cursor: pointer;}
+
+.controls .button svg {fill: inherit; height: 20px;}
+
+select {font-family: inherit; color: inherit; background-color: transparent;
+font-family: inherit; font-size: inherit; border: none;}
+
+.cell-bubble {display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+width: 150px; position: relative; cursor: pointer;}
+
+.cell-bubble svg {height: 6px; fill: white;}
+
+.table {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  border-radius: 8px;
+  top: calc(100% + 6px);
+}
+
+.table-button {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85em; font-weight: 400;
+  cursor: pointer;
+  background: rgb(40, 40, 40);
+}
+
+.table-button:hover {
+  background: rgb(75, 75, 75);
+}
+
+.table-button:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1400px) {
+
+
+}
+
+/* Large devices (≤1200px) */
+@media (max-width: 1200px) {
+
+
+}
+
+/* Medium devices (≤992px) */
+@media (max-width: 992px) {
+
+  .grid {
+    width: calc(100% - 48px);
+  }
+
+}
+
+/* Small devices (≤768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Small devices (≤700px) */
+@media (max-width: 700px) {
+
+
+}
+
+/* Extra small devices (≤576px) */
+@media (max-width: 576px) {
+
+}
