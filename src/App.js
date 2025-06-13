@@ -176,37 +176,37 @@ function App() {
 
   const merge = async (left, right, leftStart, rightEnd, state) => {
 
-    var length = left.length + right.length;
-    var newArray = new Array(length);
+    // var length = left.length + right.length;
+    // var newArray = new Array(length);
 
-    var leftIndex = 0, rightIndex = 0, cIndex = 0;
+    // var leftIndex = 0, rightIndex = 0, cIndex = 0;
 
-    if (sortingRef.current !== state) return;
+    // if (sortingRef.current !== state) return;
 
-    while (leftIndex < left.length && rightIndex < right.length){
+    // while (leftIndex < left.length && rightIndex < right.length){
 
 
-      if (sortingRef.current) return;
-      if (left[leftIndex] <= right[rightIndex]) newArray[cIndex] = left[leftIndex++];
-      else newArray[cIndex] = right[rightIndex++];
-      cIndex++;
-      setArray(prevArray => [...prevArray.slice(0, leftStart), ...newArray.slice(0, cIndex), ...left.slice(leftIndex), ...right.slice(rightIndex), ...prevArray.slice(rightEnd, array.length)]);
-      await new Promise((resolve) => setTimeout(resolve, 0));
+    //   if (sortingRef.current) return;
+    //   if (left[leftIndex] <= right[rightIndex]) newArray[cIndex] = left[leftIndex++];
+    //   else newArray[cIndex] = right[rightIndex++];
+    //   cIndex++;
+    //   setArray(prevArray => [...prevArray.slice(0, leftStart), ...newArray.slice(0, cIndex), ...left.slice(leftIndex), ...right.slice(rightIndex), ...prevArray.slice(rightEnd, array.length)]);
+    //   await new Promise((resolve) => setTimeout(resolve, 0));
 
-    }
+    // }
 
-    playSound();
+    // playSound();
 
-    while (leftIndex < left.length) newArray[cIndex++] = left[leftIndex++];
-    while (rightIndex < right.length) newArray[cIndex++] = right[rightIndex++];
-    setComparing(cIndex + leftStart);
+    // while (leftIndex < left.length) newArray[cIndex++] = left[leftIndex++];
+    // while (rightIndex < right.length) newArray[cIndex++] = right[rightIndex++];
+    // setComparing(cIndex + leftStart);
 
-    if (sortingRef.current !== state) return;
+    // if (sortingRef.current !== state) return;
 
-    setArray(prevArray => [...prevArray.slice(0, leftStart), ...newArray.slice(0, cIndex), ...left.slice(leftIndex), ...right.slice(rightIndex), ...prevArray.slice(rightEnd, array.length)]);
-    await new Promise((resolve) => setTimeout(resolve, 0));
+    // setArray(prevArray => [...prevArray.slice(0, leftStart), ...newArray.slice(0, cIndex), ...left.slice(leftIndex), ...right.slice(rightIndex), ...prevArray.slice(rightEnd, array.length)]);
+    // await new Promise((resolve) => setTimeout(resolve, 0));
 
-    return newArray;
+    // return newArray;
 
   }
 
